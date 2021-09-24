@@ -68,5 +68,6 @@ public class MainActivity extends AppCompatActivity {
         toast = Toast.makeText(getApplicationContext(),
                 str, Toast.LENGTH_SHORT);
         toast.show();
+        //add git
     }
 }
