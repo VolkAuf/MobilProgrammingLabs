@@ -2,6 +2,7 @@ package com.example.mobilprogramminglabs;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Fragment;
 import android.os.Bundle;
 import android.widget.Adapter;
 import android.widget.ArrayAdapter;
@@ -24,11 +25,14 @@ public class MainActivity extends AppCompatActivity {
     ArrayAdapter adapter;
     static List<String> list = new LinkedList<>();
     Toast toast;
+    Fragment mainFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mainFragment = new MainFragment();
 
         lvMain = findViewById(R.id.lvMain);
         lvMain.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
@@ -44,20 +48,21 @@ public class MainActivity extends AppCompatActivity {
         btnAllOff = findViewById(R.id.btnAllOff);
         btnToast = findViewById(R.id.btnToast);
 
-        btnAdd.setOnClickListener(v -> {
-            if (!etInStr.getText().toString().isEmpty()) {
-                adapter.add(etInStr.getText().toString());
-            } else {
-                Toast.makeText(getApplicationContext(),
-                        "ERROR input string", Toast.LENGTH_SHORT).show();
-            }
-        });
+        btnAdd.setOnClickListener(v -> create());
 
         btnAllOn.setOnClickListener(v -> setAllFlag(true));
         btnAllOff.setOnClickListener(v -> setAllFlag(false));
         btnToast.setOnClickListener(v -> printToast());
     }
 
+    public void create(){
+        if (!etInStr.getText().toString().isEmpty()) {
+            adapter.add(etInStr.getText().toString());
+        } else {
+            Toast.makeText(getApplicationContext(),
+                    "ERROR input string", Toast.LENGTH_SHORT).show();
+        }
+    }
     private void setAllFlag(boolean flag) {
         for (int i = 0; i < lvMain.getAdapter().getCount(); i++) {
             lvMain.setItemChecked(i, flag);
@@ -75,5 +80,21 @@ public class MainActivity extends AppCompatActivity {
         toast = Toast.makeText(getApplicationContext(),
                 str, Toast.LENGTH_SHORT);
         toast.show();
+    }
+
+    public void delete(){
+        for (int i = 0; i < lvMain.getAdapter().getCount(); i++) {
+            if (lvMain.isItemChecked(i)) {
+
+            }
+        }
+    }
+
+    public void edit(){
+
+    }
+
+    public void search(){
+
     }
 }
