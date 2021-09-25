@@ -2,7 +2,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/purple_200">
 
     <Button
         android:id="@+id/btnAllOn"
@@ -11,6 +12,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="20dp"
         android:text="Отметить все"
+        app:backgroundTint="@color/purple_700"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -21,6 +23,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="15dp"
         android:text="Вылючить всё"
+        app:backgroundTint="@color/purple_700"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnAllOn" />
 
@@ -31,6 +34,7 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="15dp"
         android:text="Вывести всё"
+        app:backgroundTint="@color/purple_700"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnAllOff" />
 
@@ -41,6 +45,7 @@
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="15dp"
         android:text="Добавить"
+        app:backgroundTint="@color/purple_700"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -51,13 +56,13 @@
         android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="15dp"
+        android:autofillHints="name"
         android:ems="10"
         android:inputType="textPersonName"
         android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnAdd"
-        app:layout_constraintStart_toStartOf="parent"
-        android:autofillHints="name" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ListView
         android:id="@+id/lvMain"

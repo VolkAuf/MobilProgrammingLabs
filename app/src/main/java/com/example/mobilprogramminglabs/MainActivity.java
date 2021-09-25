@@ -44,7 +44,14 @@ public class MainActivity extends AppCompatActivity {
         btnAllOff = findViewById(R.id.btnAllOff);
         btnToast = findViewById(R.id.btnToast);
 
-        btnAdd.setOnClickListener(v -> adapter.add(etInStr.getText().toString()));
+        btnAdd.setOnClickListener(v -> {
+            if (!etInStr.getText().toString().isEmpty()) {
+                adapter.add(etInStr.getText().toString());
+            } else {
+                Toast.makeText(getApplicationContext(),
+                        "ERROR input string", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         btnAllOn.setOnClickListener(v -> setAllFlag(true));
         btnAllOff.setOnClickListener(v -> setAllFlag(false));
