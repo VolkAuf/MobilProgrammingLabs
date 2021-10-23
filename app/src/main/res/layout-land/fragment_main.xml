@@ -8,13 +8,10 @@
 
     <ListView
         android:id="@+id/lvMain"
-        android:layout_width="0dp"
-        android:layout_height="270dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        android:layout_width="479dp"
+        android:layout_height="180dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -22,10 +19,9 @@
         android:id="@+id/tvName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="Search string"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="45dp"
+        android:text="Строка поиска"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lvMain" />
 
@@ -33,67 +29,75 @@
         android:id="@+id/etSearch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="30dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:minHeight="48dp"
+        android:minHeight="50dp"
         android:text=""
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvName"
+        app:layout_constraintStart_toEndOf="@+id/tvName"
+        app:layout_constraintTop_toBottomOf="@+id/lvMain"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/btnCreate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
         android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
         android:background="@color/teal_700"
-        android:text="Create"
+        android:text="Создать"
         android:textColor="@color/white"
         app:backgroundTint="@color/teal_700"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etSearch"
+        app:layout_constraintStart_toEndOf="@+id/lvMain"
+        app:layout_constraintTop_toTopOf="parent"
         app:strokeColor="@color/white" />
 
     <Button
         android:id="@+id/btnCheckAll"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
         android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
         android:background="@color/teal_700"
-        android:text="Check All"
+        android:text="Отметить все"
         android:textColor="@color/white"
         app:backgroundTint="@color/teal_700"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lvMain"
         app:layout_constraintTop_toBottomOf="@+id/btnCreate" />
 
     <Button
         android:id="@+id/btnDelete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
         android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
         android:background="@color/teal_700"
-        android:text="Delete"
+        android:text="Удалить"
         android:textColor="@color/white"
         app:backgroundTint="@color/teal_700"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lvMain"
         app:layout_constraintTop_toBottomOf="@+id/btnCheckAll" />
 
     <Button
         android:id="@+id/btnSearch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
         android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
         android:background="@color/teal_700"
-        android:text="Search"
+        android:text="Поиск"
         android:textColor="@color/white"
         app:backgroundTint="@color/teal_700"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lvMain"
         app:layout_constraintTop_toBottomOf="@+id/btnDelete" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
