@@ -1,17 +1,20 @@
 package com.example.mobilprogramminglabs;
 
+import static com.example.mobilprogramminglabs.MainFragment.SearchArrayResult;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 
 public class SearchResultsActivity extends AppCompatActivity {
 
-    ArrayAdapter<String> adapter;
+    ArrayAdapter<JSONObject> adapter;
     ListView lvSearchResults;
 
     @Override
@@ -21,10 +24,7 @@ public class SearchResultsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_searchresults);
         Bundle data = getIntent().getExtras();
         lvSearchResults = findViewById(R.id.lvSearchResults);
-        if (data.containsKey("SearchResults")) {
-            Object results = data.get("SearchResults");
-            adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, (ArrayList<String>) results);
-            lvSearchResults.setAdapter(adapter);
-        }
+        adapter = new AlienAdapter(this, R.layout.raw, R.id.name, SearchArrayResult);
+        lvSearchResults.setAdapter(adapter);
     }
 }

@@ -1,0 +1,24 @@
+{
+  "alien": [
+    {
+      "name": "Marsianin",
+      "age": 500,
+      "checked": true
+    },
+    {
+      "name": "Lunityanin",
+      "age": 12,
+      "checked": false
+    },
+    {
+      "name": "Uranez",
+      "age": 0,
+      "checked": true
+    },
+    {
+      "name": "Uzbekistanen",
+      "age": 5000,
+      "checked": false
+    }
+  ]
+}
